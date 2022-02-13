@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
         {
             speed *= 1.1f;
             StartCoroutine(Scale());
-            print("asd");
+            print("asdsss");
         }
     }
 
