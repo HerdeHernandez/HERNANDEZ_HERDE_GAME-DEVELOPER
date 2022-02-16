@@ -7,10 +7,10 @@ using Photon.Realtime;
 
 public class JoinManager : MonoBehaviourPunCallbacks
 {
-
     public List<string> rooms = new List<string>();
 
     public InputField inputField;
+    public GameObject text;
 
     playerData playerData;
 
@@ -25,14 +25,29 @@ public class JoinManager : MonoBehaviourPunCallbacks
 
     public void play()
     {
-        playerData.playerName = inputField.text;
-        playerData.playerID = playerID;
+        if (inputField.text.Length > 0)
+        {
+            playerData.playerName = inputField.text;
+            playerData.playerID = playerID;
 
-        if (!rooms.Contains("myRoom"))
-            PhotonNetwork.CreateRoom("myRoom");
+            if (!rooms.Contains("myRoom"))
+                PhotonNetwork.CreateRoom("myRoom");
+            else
+                if (playerCount < 5)
+                PhotonNetwork.JoinRoom("myRoom");
+        }
         else
-            if (playerCount < 5)
-            PhotonNetwork.JoinRoom("myRoom");
+        {
+            text.SetActive(true);
+            StartCoroutine(error());
+        }
+       
+    }
+
+    IEnumerator error()
+    {
+        yield return new WaitForSeconds(1);
+        text.SetActive(false);
     }
 
     void generateID()

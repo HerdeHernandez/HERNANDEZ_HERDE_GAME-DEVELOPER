@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7442478356479083578}
-  - component: {fileID: 7442478356479083910}
+  - component: {fileID: 3132210872864199793}
   m_Layer: 0
   m_Name: Hole2D
   m_TagString: Untagged
@@ -208,7 +208,7 @@ Transform:
   m_Father: {fileID: 7442478356479083577}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &7442478356479083910
+--- !u!60 &3132210872864199793
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,7 +451,7 @@ MonoBehaviour:
   ID: 
   Score: 0
   nameText: {fileID: 7442478356479082662}
-  polygonCollider: {fileID: 7442478356479083910}
+  polygonCollider: {fileID: 3132210872864199793}
   groundCollider: {fileID: 0}
   meshCollider: {fileID: 0}
   camera: {fileID: 7442478356479083567}

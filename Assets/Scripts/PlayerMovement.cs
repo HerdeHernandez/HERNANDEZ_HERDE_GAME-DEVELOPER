@@ -179,13 +179,16 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
     }
 
     public void Resize()
-    {   
-        if (Score % 10 == 0)
+    {
+        if (this.transform.localScale.x < 5)
         {
-            speed *= 1.1f;
-            StartCoroutine(Scale());
-           
-        }
+            if (Score % 10 == 0)
+            {
+                speed *= 1.1f;
+                StartCoroutine(Scale());
+
+            }
+        }      
     }
 
 
@@ -196,7 +199,7 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
 
         float time = 0;
        
-        while (time <= .4f)
+        while (time <= .1f)
         {           
             time += Time.deltaTime;
             camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, camera.transform.localPosition / 1.028f, time);
@@ -205,11 +208,7 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
             yield return null;
           //  camera.transform.localPosition = new Vector3(camera.transform.localPosition.x, camera.transform.localPosition.y / 0.0031f, camera.transform.localPosition.z);
         }
-
        // yield return new WaitForSeconds(.4f);
-      
-
-
     }
 
     [PunRPC]
