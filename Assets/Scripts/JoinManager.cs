@@ -93,4 +93,9 @@ public class JoinManager : MonoBehaviourPunCallbacks
 
     }
 
+    public void exit()
+    {
+        Application.Quit();
+    }
+
 }

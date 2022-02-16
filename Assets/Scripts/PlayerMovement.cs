@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Photon.Pun;
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
     private Vector3 offset;    
 
     public float scale = 0.5f;
-    float speed = .015f;
+    float speed = .03f;
 
     public bool mouseHold = false;
 
@@ -63,7 +64,7 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
         view = this.GetComponent<PhotonView>();
         scoreBoard = GameObject.Find("Content").transform;
 
-        this.transform.GetChild(0).GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+        this.transform.GetChild(1).GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -117,10 +118,7 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
             }
         }
 
-        if (scoreBoard.GetComponent<VerticalLayoutGroup>().enabled == true)
-            scoreBoard.GetComponent<VerticalLayoutGroup>().enabled = false;
-
-        scoreBoard.GetComponent<VerticalLayoutGroup>().enabled = true;
+      
     }
 
     private void Hole()
@@ -199,7 +197,7 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
 
         float time = 0;
        
-        while (time <= .1f)
+        while (time <= .15f)
         {           
             time += Time.deltaTime;
             camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, camera.transform.localPosition / 1.028f, time);
@@ -260,5 +258,19 @@ public class PlayerMovement : MonoBehaviour, IPunObservable
             Score = (int)stream.ReceiveNext();
         }
             
+    }
+
+    public void exit()
+    {
+        StartCoroutine(exitGame());
+    }
+
+    IEnumerator exitGame()
+    {
+        PhotonNetwork.LeaveRoom();
+
+        while (PhotonNetwork.InRoom)
+            yield return null;
+        SceneManager.LoadScene("Start");
     }
 }
