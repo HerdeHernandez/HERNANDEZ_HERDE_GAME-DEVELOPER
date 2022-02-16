@@ -1,0 +1,68 @@
+Bolt Free Debug v1.3.1 starting with a simulation rate of 60 on platform WindowsPlayer
+[STUN] Reset configs
+Starting UdpKit Task with ID: 5
+Creating Global Behaviour: 'Photon.Bolt.Utils.BoltConsole'
+Creating Global Behaviour: 'Photon.Bolt.Utils.BoltPhysicsDebug'
+Creating Global Behaviour: 'Photon.Bolt.Internal.BoltPoll'
+Creating Global Behaviour: 'Photon.Bolt.Internal.BoltSend'
+Creating Global Behaviour: 'Photon.Bolt.SceneManagement.BoltSceneLoader'
+Creating Global Behaviour: 'Photon.Bolt.PhotonCloudGlobalBehavior+PhotonBoltBehavior'
+Creating Global Behaviour: 'Photon.Bolt.PhotonCloudGlobalBehavior'
+Registered token class Photon.Bolt.Tokens.BoltDisconnectToken as id 1
+Registered token class Photon.Bolt.PhotonRoomProperties as id 2
+Binding physical socket using platform 'UdpKit.Platform.PhotonPlatform' with IP [EndPoint IPv4 0.0.0.0:0]
+Physical socket bound to 0.0.0.0:64447
+LAN endpoint resolved as [EndPoint IPv4 192.168.143.4:64447]
+[PhotonPoller] Starting LBC with Protocol: Udp
+Starting Realtime background handler (0)
+[PhotonPoller] Running background connection with Region Master
+[PhotonPoller] Starting timeout watcher: 20
+STUN Server stun.l.google.com resolved as 74.125.204.127
+STUN Server stun1.l.google.com resolved as 142.250.21.127
+STUN Server stun2.l.google.com resolved as 172.253.56.127
+STUN Server stun3.l.google.com resolved as 74.125.197.127
+STUN Server stun4.l.google.com resolved as 172.253.127.127
+STUN Server stun.stunprotocol.org resolved as 18.191.223.12
+[STUN] Requesting Info to server 74.125.204.127:19302
+[STUN] Request Success: [EndPoint IPv4 136.158.64.79:59213]
+Region List Received
+Available Regions
+eu[172.65.212.204:5055]: 203ms
+us[172.65.215.189:5055]: 273ms
+usw[172.65.254.139:5055]: 211ms
+cae[52.235.30.8:5055]: 224ms
+asia[172.65.205.114:5055]: 32ms
+jp[20.89.104.232:5055]: 71ms
+au[52.243.78.197:5055]: 117ms
+sa[5.188.239.8:5055]: 371ms
+in[172.65.243.74:5055]: 65ms
+ru[5.188.170.5:5055]: 293ms
+rue[172.65.214.114:5055]: 320ms
+kr[20.196.192.33:5055]: 54ms
+za[172.65.204.156:5055]: 454ms
+tr[92.38.181.70:5055]: 222ms
+Connecting to Region Master asia
+Received your UserID from server. Updating local value to: b8f1da88-6465-4c15-b760-bf4d082cfc1a
+[PhotonPoller] Initialization callback: True
+[PhotonPoller] Cancel Startup timeout routine
+Joined to Lobby 
+Found 0 Scene Objects
+Changing Connect State: Idle => CreateRoomPending
+Creating new room: Game
+Starting Room Create Timer with 20s
+Changing Connect State: CreateRoomPending => Connected
+Joined to room
+Caching Original Master Client: 1
+Scene Room enqueued to load
+Loading Room (1)
+Found 0 Scene Objects
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Collider] (Token: NULL)
+Attached [Entity [NetworkId 0-0-0-2-0-0-0-1] Photon.Bolt.Player] (Token: NULL)
+Done loading Room
+Stopping UdpKit Task 5
+Stopping Photon Bolt Immediate
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Collider]
+Detached [Entity [NetworkId 0-0-0-2-0-0-0-1] Photon.Bolt.Player]
+Stopping Realtime background handler (0)
+Realtime background handler stopped.
+Behaviour not available in this dispatcher, ignoring call to Remove.

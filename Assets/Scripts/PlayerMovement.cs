@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Photon.Pun;
 
 [RequireComponent(typeof(MeshCollider))]
-public class PlayerMovement : MonoBehaviour
+
+public class PlayerMovement : MonoBehaviour, IPunObservable
 {
-    public string Me;
+    public string Me, ID;
     public int Score;
+
+    public Text nameText;
+    Transform scoreBoard;
 
     public PolygonCollider2D polygonCollider;
     public PolygonCollider2D groundCollider;
@@ -24,17 +30,40 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 offset;    
 
     public float scale = 0.5f;
-    float speed = .011f;
+    float speed = .015f;
+
+    public bool mouseHold = false;
+
+    PhotonView view;
+
+    void Awake()
+    {
+        //  polygonCollider = GameObject.Find("Hole2D").GetComponent<PolygonCollider2D>();
+
+
+        GameObject colliderParent = GameObject.Find("Collider");
+
+        groundCollider = colliderParent.transform.GetChild(0).GetComponent<PolygonCollider2D>();
+
+        meshCollider = colliderParent.transform.GetChild(1).GetComponent<MeshCollider>();
+
+        colliderGround = GameObject.Find("Quad").GetComponent<Collider>();
+        // camera = GameObject.Find("Camera").GetComponent<Camera>();      
+    }
     void Start()
     {
-        GameObject[] Objects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
+        Transform objParent = GameObject.Find("Objects").transform;
 
-        foreach (var obj in Objects)
+        foreach (Transform obj in objParent)
         { 
-            if (obj.layer == LayerMask.NameToLayer("Objects"))
+            if (obj.gameObject.layer == LayerMask.NameToLayer("Objects"))
                 Physics.IgnoreCollision(obj.GetComponent<Collider>(), meshCollider, true);
         }
-        
+
+        view = this.GetComponent<PhotonView>();
+        scoreBoard = GameObject.Find("Content").transform;
+
+        this.transform.GetChild(0).GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         Physics.IgnoreCollision(other, colliderGround, true);
         Physics.IgnoreCollision(other, meshCollider, false);
 
-        other.tag = this.name;
+        other.GetComponent<objectInfo>().eatenBy = this.GetComponent<PhotonView>();
     }
 
     private void OnTriggerExit(Collider other)
@@ -50,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         Physics.IgnoreCollision(other, colliderGround, false);
         Physics.IgnoreCollision(other, meshCollider, true);
 
-        other.tag = this.name;
+        other.GetComponent<objectInfo>().eatenBy = this.GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -63,7 +92,35 @@ public class PlayerMovement : MonoBehaviour
             polygonCollider.transform.localScale = this.transform.localScale * scale;
             Hole();
             meshCollider3d();   
-        }          
+        }       
+    }
+
+    void Update()
+    {
+        if (view.IsMine)
+        {
+            if (camera.gameObject.activeInHierarchy == false)
+                camera.gameObject.SetActive(true);
+                nameText.gameObject.SetActive(true);
+            if (Input.GetMouseButtonDown(0))
+            {
+                mouseHold = true;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                mouseHold = false;
+            }
+
+            if (mouseHold == true)
+            {
+                movement();
+            }
+        }
+
+        if (scoreBoard.GetComponent<VerticalLayoutGroup>().enabled == true)
+            scoreBoard.GetComponent<VerticalLayoutGroup>().enabled = false;
+
+        scoreBoard.GetComponent<VerticalLayoutGroup>().enabled = true;
     }
 
     private void Hole()
@@ -88,10 +145,8 @@ public class PlayerMovement : MonoBehaviour
         meshCollider.sharedMesh = mesh;
     }
 
-    void OnMouseDrag()
-    {   
-        
-
+    void movement()
+    {           
         Vector3 p = Input.mousePosition;
         p.z = camera.transform.position.y;
         Vector3 pos = camera.ScreenToWorldPoint(p);
@@ -118,20 +173,18 @@ public class PlayerMovement : MonoBehaviour
             //print("d");
         }
 
-        camera.transform.position = new Vector3(this.transform.position.x, camera.transform.position.y, this.transform.position.z);
+      //  camera.transform.position = new Vector3(this.transform.position.x, camera.transform.position.y, this.transform.position.z);
 
         playerPos = pos;
     }
 
     public void Resize()
-    {
-        Score++;
-
+    {   
         if (Score % 10 == 0)
         {
             speed *= 1.1f;
             StartCoroutine(Scale());
-            print("asdsss");
+           
         }
     }
 
@@ -142,12 +195,71 @@ public class PlayerMovement : MonoBehaviour
         Vector3 End = start * 2;
 
         float time = 0;
-
+       
         while (time <= .4f)
-        {
+        {           
             time += Time.deltaTime;
+            camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, camera.transform.localPosition / 1.028f, time);
             this.transform.localScale = Vector3.Lerp(start, End, time);
+            
             yield return null;
+          //  camera.transform.localPosition = new Vector3(camera.transform.localPosition.x, camera.transform.localPosition.y / 0.0031f, camera.transform.localPosition.z);
         }
+
+       // yield return new WaitForSeconds(.4f);
+      
+
+
+    }
+
+    [PunRPC]
+    void setName(string name, string ID)
+    {
+        Me = name;
+        this.ID = ID;
+
+        nameText.text = name;
+
+        scoreBoard = GameObject.Find("Content").transform;
+
+        var NameScore = Resources.Load("NameScore");
+
+        var NameScoreDetail = Instantiate(NameScore, scoreBoard) as GameObject;
+        NameScoreDetail.name = ID;
+        NameScoreDetail.transform.GetChild(0).GetComponent<Text>().text = Me;
+        NameScoreDetail.transform.GetChild(1).GetComponent<Text>().text = Score.ToString();
+    }
+
+    [PunRPC]
+    void setScore()
+    {
+        Score++;
+
+        Resize();
+
+        scoreBoard = GameObject.Find("Content").transform;
+
+        foreach (Transform child in scoreBoard)
+        {
+            if(child.name == this.ID)
+                child.GetChild(1).GetComponent<Text>().text = Score.ToString();
+        }
+    }
+
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(Me);
+            stream.SendNext(Score);
+        }
+
+        else if (stream.IsReading)
+        {
+            Me = (string)stream.ReceiveNext();
+            Score = (int)stream.ReceiveNext();
+        }
+            
     }
 }

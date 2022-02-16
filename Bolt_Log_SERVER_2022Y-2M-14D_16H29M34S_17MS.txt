@@ -1,0 +1,143 @@
+Bolt Free Debug v1.3.1 starting with a simulation rate of 60 on platform WindowsPlayer
+[STUN] Reset configs
+Starting UdpKit Task with ID: 5
+Creating Global Behaviour: 'Photon.Bolt.Utils.BoltConsole'
+Creating Global Behaviour: 'Photon.Bolt.Utils.BoltPhysicsDebug'
+Creating Global Behaviour: 'Photon.Bolt.Internal.BoltPoll'
+Creating Global Behaviour: 'Photon.Bolt.Internal.BoltSend'
+Creating Global Behaviour: 'Photon.Bolt.SceneManagement.BoltSceneLoader'
+Creating Global Behaviour: 'Photon.Bolt.PhotonCloudGlobalBehavior+PhotonBoltBehavior'
+Creating Global Behaviour: 'Photon.Bolt.PhotonCloudGlobalBehavior'
+Registered token class Photon.Bolt.Tokens.BoltDisconnectToken as id 1
+Registered token class Photon.Bolt.PhotonRoomProperties as id 2
+Binding physical socket using platform 'UdpKit.Platform.PhotonPlatform' with IP [EndPoint IPv4 0.0.0.0:0]
+Physical socket bound to 0.0.0.0:61522
+LAN endpoint resolved as [EndPoint IPv4 192.168.143.4:61522]
+[PhotonPoller] Starting LBC with Protocol: Udp
+Starting Realtime background handler (0)
+[PhotonPoller] Running background connection with Region Master
+[PhotonPoller] Starting timeout watcher: 20
+STUN Server stun.l.google.com resolved as 74.125.204.127
+STUN Server stun1.l.google.com resolved as 142.250.21.127
+STUN Server stun2.l.google.com resolved as 172.253.56.127
+STUN Server stun3.l.google.com resolved as 74.125.197.127
+STUN Server stun4.l.google.com resolved as 172.253.127.127
+STUN Server stun.stunprotocol.org resolved as 18.191.223.12
+[STUN] Requesting Info to server 74.125.204.127:19302
+[STUN] Request Success: [EndPoint IPv4 136.158.64.79:33386]
+Region List Received
+Available Regions
+eu[172.65.212.204:5055]: 210ms
+us[172.65.215.189:5055]: 283ms
+usw[172.65.254.139:5055]: 222ms
+cae[52.235.30.8:5055]: 234ms
+asia[172.65.205.114:5055]: 42ms
+jp[20.89.104.232:5055]: 78ms
+au[52.243.78.197:5055]: 125ms
+sa[5.188.239.8:5055]: 376ms
+in[172.65.243.74:5055]: 75ms
+ru[5.188.170.5:5055]: 286ms
+rue[172.65.214.114:5055]: 327ms
+kr[20.196.192.33:5055]: 63ms
+za[172.65.204.156:5055]: 475ms
+tr[92.38.181.70:5055]: 226ms
+Connecting to Region Master asia
+Received your UserID from server. Updating local value to: 486ad2c4-3cc6-4574-a958-fe17c08ad09c
+[PhotonPoller] Initialization callback: True
+[PhotonPoller] Cancel Startup timeout routine
+Joined to Lobby 
+Found 0 Scene Objects
+Changing Connect State: Idle => CreateRoomPending
+Creating new room: Game
+Starting Room Create Timer with 20s
+Changing Connect State: CreateRoomPending => Connected
+Joined to room
+Caching Original Master Client: 1
+Scene Room enqueued to load
+Loading Room (1)
+Found 0 Scene Objects
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Collider] (Token: NULL)
+Attached [Entity [NetworkId 0-0-0-2-0-0-0-1] Photon.Bolt.Player] (Token: NULL)
+Done loading Room
+Player 2 entered the room
+[NAT Punch] Ping Request from Player 2 with Target EndPoint [EndPoint IPv4 136.158.64.79:48186]
+[EndPoint IPv4 192.168.143.4:59302] connected
+[NAT Punch] Ping [EndPoint IPv4 136.158.64.79:48186] [30]
+Created [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Collider] on [Connection [EndPoint IPv4 192.168.143.4:59302]]
+Created [Entity [NetworkId 0-0-0-2-0-0-0-1] Photon.Bolt.Player] on [Connection [EndPoint IPv4 192.168.143.4:59302]]
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME RESET: 333
+[NAT Punch] Ping Request Cancel from Player 2
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME RESET: -2
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME STALL: 1
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME RESET: -6
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME RESET: 19152
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-2] Photon.Bolt.Collider] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-1-0-0-0-2] Photon.Bolt.Collider] from [Connection [EndPoint IPv4 192.168.143.4:59302]]
+Attached [Entity [NetworkId 0-0-0-2-0-0-0-2] Photon.Bolt.Player] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-2-0-0-0-2] Photon.Bolt.Player] from [Connection [EndPoint IPv4 192.168.143.4:59302]]
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME RESET: 91
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME RESET: -11
+Send Rate: Update sent every 6 frames (Normal Rate 3 * Rate Multiplier 2)
+Send Rate: Update sent every 6 frames (Normal Rate 3 * Rate Multiplier 2)
+Send Rate: Update sent every 6 frames (Normal Rate 3 * Rate Multiplier 2)
+Send Rate: Update sent every 6 frames (Normal Rate 3 * Rate Multiplier 2)
+Send Rate: Update sent every 6 frames (Normal Rate 3 * Rate Multiplier 2)
+Send Rate: Update sent every 6 frames (Normal Rate 3 * Rate Multiplier 2)
+Send Rate: Update sent every 6 frames (Normal Rate 3 * Rate Multiplier 2)
+Send Rate: Update sent every 9 frames (Normal Rate 3 * Rate Multiplier 3)
+Send Rate: Update sent every 9 frames (Normal Rate 3 * Rate Multiplier 3)
+Send Rate: Update sent every 9 frames (Normal Rate 3 * Rate Multiplier 3)
+Send Rate: Update sent every 9 frames (Normal Rate 3 * Rate Multiplier 3)
+Send Rate: Update sent every 9 frames (Normal Rate 3 * Rate Multiplier 3)
+Send Rate: Update sent every 9 frames (Normal Rate 3 * Rate Multiplier 3)
+Send Rate: Update sent every 12 frames (Normal Rate 3 * Rate Multiplier 4)
+Send Rate: Update sent every 12 frames (Normal Rate 3 * Rate Multiplier 4)
+Send Rate: Update sent every 12 frames (Normal Rate 3 * Rate Multiplier 4)
+Send Rate: Update sent every 12 frames (Normal Rate 3 * Rate Multiplier 4)
+Send Rate: Update sent every 12 frames (Normal Rate 3 * Rate Multiplier 4)
+Send Rate: Update sent every 12 frames (Normal Rate 3 * Rate Multiplier 4)
+Send Rate: Update sent every 15 frames (Normal Rate 3 * Rate Multiplier 5)
+Send Rate: Update sent every 15 frames (Normal Rate 3 * Rate Multiplier 5)
+Send Rate: Update sent every 15 frames (Normal Rate 3 * Rate Multiplier 5)
+Send Rate: Update sent every 15 frames (Normal Rate 3 * Rate Multiplier 5)
+Send Rate: Update sent every 15 frames (Normal Rate 3 * Rate Multiplier 5)
+Send Rate: Update sent every 15 frames (Normal Rate 3 * Rate Multiplier 5)
+Send Rate: Update sent every 15 frames (Normal Rate 3 * Rate Multiplier 5)
+Send Rate: Update sent every 18 frames (Normal Rate 3 * Rate Multiplier 6)
+Send Rate: Update sent every 18 frames (Normal Rate 3 * Rate Multiplier 6)
+Send Rate: Update sent every 18 frames (Normal Rate 3 * Rate Multiplier 6)
+Send Rate: Update sent every 18 frames (Normal Rate 3 * Rate Multiplier 6)
+Send Rate: Update sent every 18 frames (Normal Rate 3 * Rate Multiplier 6)
+Send Rate: Update sent every 18 frames (Normal Rate 3 * Rate Multiplier 6)
+Send Rate: Update sent every 21 frames (Normal Rate 3 * Rate Multiplier 7)
+Send Rate: Update sent every 21 frames (Normal Rate 3 * Rate Multiplier 7)
+Send Rate: Update sent every 21 frames (Normal Rate 3 * Rate Multiplier 7)
+Send Rate: Update sent every 21 frames (Normal Rate 3 * Rate Multiplier 7)
+Send Rate: Update sent every 21 frames (Normal Rate 3 * Rate Multiplier 7)
+Send Rate: Update sent every 21 frames (Normal Rate 3 * Rate Multiplier 7)
+Send Rate: Update sent every 21 frames (Normal Rate 3 * Rate Multiplier 7)
+Send Rate: Update sent every 24 frames (Normal Rate 3 * Rate Multiplier 8)
+Send Rate: Update sent every 24 frames (Normal Rate 3 * Rate Multiplier 8)
+Send Rate: Update sent every 24 frames (Normal Rate 3 * Rate Multiplier 8)
+Send Rate: Update sent every 24 frames (Normal Rate 3 * Rate Multiplier 8)
+Send Rate: Update sent every 24 frames (Normal Rate 3 * Rate Multiplier 8)
+Send Rate: Update sent every 24 frames (Normal Rate 3 * Rate Multiplier 8)
+Send Rate: Update sent every 27 frames (Normal Rate 3 * Rate Multiplier 9)
+Player 2 has left the room, current master client is 1
+Send Rate: Update sent every 27 frames (Normal Rate 3 * Rate Multiplier 9)
+Send Rate: Update sent every 27 frames (Normal Rate 3 * Rate Multiplier 9)
+Send Rate: Update sent every 27 frames (Normal Rate 3 * Rate Multiplier 9)
+Send Rate: Update sent every 27 frames (Normal Rate 3 * Rate Multiplier 9)
+Send Rate: Update sent every 27 frames (Normal Rate 3 * Rate Multiplier 9)
+[Connection [EndPoint IPv4 192.168.143.4:59302]] FRAME RESET: -1219
+[EndPoint IPv4 192.168.143.4:59302] disconnected
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-2] Photon.Bolt.Collider]
+Detached [Entity [NetworkId 0-0-0-2-0-0-0-2] Photon.Bolt.Player]
+Stopping UdpKit Task 5
+Stopping Photon Bolt Immediate
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Collider]
+Detached [Entity [NetworkId 0-0-0-2-0-0-0-1] Photon.Bolt.Player]
+Stopping Realtime background handler (0)
+Realtime background handler stopped.
+Behaviour not available in this dispatcher, ignoring call to Remove.

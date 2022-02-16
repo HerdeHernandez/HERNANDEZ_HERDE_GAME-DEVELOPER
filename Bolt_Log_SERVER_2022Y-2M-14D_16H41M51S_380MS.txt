@@ -1,0 +1,176 @@
+Bolt Free Debug v1.3.1 starting with a simulation rate of 60 on platform WindowsPlayer
+[STUN] Reset configs
+Starting UdpKit Task with ID: 5
+Creating Global Behaviour: 'Photon.Bolt.Utils.BoltConsole'
+Creating Global Behaviour: 'Photon.Bolt.Utils.BoltPhysicsDebug'
+Creating Global Behaviour: 'Photon.Bolt.Internal.BoltPoll'
+Creating Global Behaviour: 'Photon.Bolt.Internal.BoltSend'
+Creating Global Behaviour: 'Photon.Bolt.SceneManagement.BoltSceneLoader'
+Creating Global Behaviour: 'Photon.Bolt.PhotonCloudGlobalBehavior+PhotonBoltBehavior'
+Creating Global Behaviour: 'Photon.Bolt.PhotonCloudGlobalBehavior'
+Registered token class Photon.Bolt.Tokens.BoltDisconnectToken as id 1
+Registered token class Photon.Bolt.PhotonRoomProperties as id 2
+Binding physical socket using platform 'UdpKit.Platform.PhotonPlatform' with IP [EndPoint IPv4 0.0.0.0:0]
+Physical socket bound to 0.0.0.0:50951
+LAN endpoint resolved as [EndPoint IPv4 192.168.143.4:50951]
+[PhotonPoller] Starting LBC with Protocol: Udp
+Starting Realtime background handler (0)
+[PhotonPoller] Running background connection with Region Master
+[PhotonPoller] Starting timeout watcher: 20
+STUN Server stun.l.google.com resolved as 108.177.125.127
+STUN Server stun1.l.google.com resolved as 142.250.21.127
+STUN Server stun2.l.google.com resolved as 172.253.56.127
+STUN Server stun3.l.google.com resolved as 74.125.197.127
+STUN Server stun4.l.google.com resolved as 172.253.127.127
+STUN Server stun.stunprotocol.org resolved as 18.191.223.12
+[STUN] Requesting Info to server 108.177.125.127:19302
+[STUN] Request Success: [EndPoint IPv4 136.158.64.79:1285]
+Region List Received
+Available Regions
+eu[172.65.212.204:5055]: 210ms
+us[172.65.215.189:5055]: 282ms
+usw[172.65.254.139:5055]: 221ms
+cae[52.235.30.8:5055]: 240ms
+asia[172.65.205.114:5055]: 40ms
+jp[20.89.104.232:5055]: 79ms
+au[52.243.78.197:5055]: 127ms
+sa[5.188.239.8:5055]: 379ms
+in[172.65.243.74:5055]: 73ms
+ru[5.188.170.5:5055]: 288ms
+rue[172.65.214.114:5055]: 332ms
+kr[20.196.192.33:5055]: 65ms
+za[172.65.204.156:5055]: 431ms
+tr[92.38.181.70:5055]: 233ms
+Connecting to Region Master asia
+Received your UserID from server. Updating local value to: a8b2ebb9-4482-4056-bbfa-a26bd9c48c74
+[PhotonPoller] Initialization callback: True
+[PhotonPoller] Cancel Startup timeout routine
+Joined to Lobby 
+Found 0 Scene Objects
+Changing Connect State: Idle => CreateRoomPending
+Creating new room: Game
+Starting Room Create Timer with 20s
+Changing Connect State: CreateRoomPending => Connected
+Joined to room
+Caching Original Master Client: 1
+Scene Room enqueued to load
+Loading Room (1)
+Found 0 Scene Objects
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Player] (Token: NULL)
+Done loading Room
+Player 2 entered the room
+[EndPoint IPv4 192.168.143.4:62456] connected
+Created [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Player] on [Connection [EndPoint IPv4 192.168.143.4:62456]]
+[NAT Punch] Ping Request from Player 2 with Target EndPoint [EndPoint IPv4 136.158.64.79:2403]
+[NAT Punch] Ping [EndPoint IPv4 136.158.64.79:2403] [30]
+[NAT Punch] Ping Request Cancel from Player 2
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME STALL: 0
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME STALL: 1
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME RESET: -4
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-2] Photon.Bolt.Player] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-1-0-0-0-2] Photon.Bolt.Player] from [Connection [EndPoint IPv4 192.168.143.4:62456]]
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME RESET: 1432
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME RESET: -12
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME RESET: -7
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME RESET: 17
+[Connection [EndPoint IPv4 192.168.143.4:62456]] FRAME FORWARD: 10
+[EndPoint IPv4 192.168.143.4:62456] disconnected
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-2] Photon.Bolt.Player]
+Player 2 has left the room, current master client is 1
+Player 3 entered the room
+[EndPoint IPv4 192.168.143.4:53204] connected
+Created [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Player] on [Connection [EndPoint IPv4 192.168.143.4:53204]]
+[NAT Punch] Ping Request from Player 3 with Target EndPoint [EndPoint IPv4 136.158.64.79:4946]
+[NAT Punch] Ping [EndPoint IPv4 136.158.64.79:4946] [30]
+[NAT Punch] Ping Request Cancel from Player 3
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME STALL: 1
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME STALL: 1
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME RESET: 4648
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-3] Photon.Bolt.Player] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-1-0-0-0-3] Photon.Bolt.Player] from [Connection [EndPoint IPv4 192.168.143.4:53204]]
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME RESET: -10
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME FORWARD: 12
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME RESET: 16
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME FORWARD: 10
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME FORWARD: 10
+[Connection [EndPoint IPv4 192.168.143.4:53204]] FRAME FORWARD: 10
+[EndPoint IPv4 192.168.143.4:53204] disconnected
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-3] Photon.Bolt.Player]
+Player 3 has left the room, current master client is 1
+Player 4 entered the room
+[EndPoint IPv4 192.168.143.4:57417] connected
+Created [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Player] on [Connection [EndPoint IPv4 192.168.143.4:57417]]
+[NAT Punch] Ping Request from Player 4 with Target EndPoint [EndPoint IPv4 136.158.64.79:10286]
+[NAT Punch] Ping [EndPoint IPv4 136.158.64.79:10286] [30]
+[NAT Punch] Ping Request Cancel from Player 4
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: -1
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: 11405
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-4] Photon.Bolt.Player] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-1-0-0-0-4] Photon.Bolt.Player] from [Connection [EndPoint IPv4 192.168.143.4:57417]]
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: -17
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: 29
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME STALL: 1
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME STALL: 1
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: -85
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: 14
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: 98
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: -5
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: 14
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: -17
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 11
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: 30
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: -4
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 10
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 10
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME RESET: -1
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 11
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 11
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 11
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 11
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 10
+[Connection [EndPoint IPv4 192.168.143.4:57417]] FRAME FORWARD: 10
+[EndPoint IPv4 192.168.143.4:57417] disconnected
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-4] Photon.Bolt.Player]
+Player 4 has left the room, current master client is 1
+Player 5 entered the room
+[EndPoint IPv4 192.168.143.4:65509] connected
+Created [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Player] on [Connection [EndPoint IPv4 192.168.143.4:65509]]
+[NAT Punch] Ping Request from Player 5 with Target EndPoint [EndPoint IPv4 136.158.64.79:17835]
+[NAT Punch] Ping Request Cancel from Player 5
+[Connection [EndPoint IPv4 192.168.143.4:65509]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:65509]] FRAME RESET: 21820
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-5] Photon.Bolt.Player] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-1-0-0-0-5] Photon.Bolt.Player] from [Connection [EndPoint IPv4 192.168.143.4:65509]]
+[Connection [EndPoint IPv4 192.168.143.4:65509]] FRAME RESET: -8
+[Connection [EndPoint IPv4 192.168.143.4:65509]] FRAME RESET: 19
+[EndPoint IPv4 192.168.143.4:65509] disconnected
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-5] Photon.Bolt.Player]
+Player 5 has left the room, current master client is 1
+Player 6 entered the room
+[EndPoint IPv4 192.168.143.4:49156] connected
+Created [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Player] on [Connection [EndPoint IPv4 192.168.143.4:49156]]
+[NAT Punch] Ping Request from Player 6 with Target EndPoint [EndPoint IPv4 136.158.64.79:32419]
+[NAT Punch] Ping Request Cancel from Player 6
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME STALL: 0
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME STALL: 1
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME STALL: 2
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME RESET: 43176
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-6] Photon.Bolt.Player] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-1-0-0-0-6] Photon.Bolt.Player] from [Connection [EndPoint IPv4 192.168.143.4:49156]]
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME RESET: 24
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME RESET: -60
+[Connection [EndPoint IPv4 192.168.143.4:49156]] FRAME RESET: 58
+Stopping UdpKit Task 5
+Stopping Photon Bolt Immediate
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-1] Photon.Bolt.Player]
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-6] Photon.Bolt.Player]
+Stopping Realtime background handler (0)
+Realtime background handler stopped.
+Behaviour not available in this dispatcher, ignoring call to Remove.
